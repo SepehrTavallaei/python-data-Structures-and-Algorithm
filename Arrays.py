@@ -11,3 +11,6 @@
 #types of Array:
 # there are two types of array depending on the number of dimenstion : 1) one dimesion 2) multi dymension
 # we use indexes to access elements in one dimensional Arrays
+# in two dimensional Array we use double indexes to access elements(basically two dimensional Array is a typical matrix)
+#in three dimensional Array we can imagine a qube with numbers on it and it consists of multiple two dimensional arrays and ti access each element we use three indexes
+#in real world we mostly use one and two dimensional Array
