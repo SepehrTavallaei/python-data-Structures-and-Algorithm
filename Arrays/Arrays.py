@@ -26,8 +26,23 @@
 import array;
 my_array = array.array('i') # this means that our array is going to store only intergers
 array1 = array.array('i',[1,2,3,4]) # now in the second parameter of the array module we put the array, in this example I creat one dimensional array that store 4 contiguose block in the memory.
-print(array1)
-#one of the benefits that array gives us is that it is more memory efficient than lists because it is limited to storing a sepecific data type but in the lists we store data types how ever we want and array is in the python standard library; no additional library that is outside of python is required to be download. the only limitation that it has is that it only basic data types this means that we can not creat our on custom data type and use it with array module
-#the next module that we are ggoing to talk about is numpy.
 
-#NUMPY => this library is not preinstalled with python standard library so we have to install it using command pip3 install numpy
+#one of the benefits that array gives us is that it is more memory efficient than lists because it is limited to storing a sepecific data type but in the lists we store data types how ever we want and array is in the python standard library; no additional library that is outside of python is required to be download. the only limitation that it has is that it only basic data types this means that we can not creat our on custom data type and use it with array module
+
+# the other code types that we can specify what type of data we wana use in array are:
+# b - B - H - h - i l L q Q  => int / f , d => float
+
+#the next module that we are ggoing to talk about is numpy.
+#numpy is not a built in module in python so in orther to use it we have to pip3 install numpy it :
+import numpy 
+new_array = numpy.array([1,2,3,4])
+
+
+#now lets talk about the time complexity of arrays: in both ways using array or numpy initialising and assigning a variuable is O(N) time complexity because its based on how many data we wana put in an array but importing both is O(1) time complexity.
+
+#insertion to Array:
+#to insert in an array there are three cases: 1) we wana insert an element at the begining of the array or in the middle or art the end the first two are time consuming. anyway now we wana show you how to do that:
+np_array1 = numpy.array([1,2,3,4],'int')
+np_array1.insert(0,6) # the first parameter is representing the index which we want to locate the element and the second is the value of an element which we wana put in the array
+
+
