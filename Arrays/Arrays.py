@@ -26,7 +26,7 @@
 import array;
 my_array = array.array('i') # this means that our array is going to store only intergers
 array1 = array.array('i',[1,2,3,4]) # now in the second parameter of the array module we put the array, in this example I creat one dimensional array that store 4 contiguose block in the memory.
-
+array1.insert(0,6)
 #one of the benefits that array gives us is that it is more memory efficient than lists because it is limited to storing a sepecific data type but in the lists we store data types how ever we want and array is in the python standard library; no additional library that is outside of python is required to be download. the only limitation that it has is that it only basic data types this means that we can not creat our on custom data type and use it with array module
 
 # the other code types that we can specify what type of data we wana use in array are:
@@ -42,7 +42,34 @@ new_array = numpy.array([1,2,3,4])
 
 #insertion to Array:
 #to insert in an array there are three cases: 1) we wana insert an element at the begining of the array or in the middle or art the end the first two are time consuming. anyway now we wana show you how to do that:
-np_array1 = numpy.array([1,2,3,4],'int')
-np_array1.insert(0,6) # the first parameter is representing the index which we want to locate the element and the second is the value of an element which we wana put in the array
+np_array1 = numpy.array([1,2,3,4])
+#np_array1.insert(0,6) 
+# the first parameter is representing the index which we want to locate the element and the second is the value of an element which we wana put in the array
 
+#Array tranversal:
+#traversing an array means that visiting all the elemnt of an array for this use: we may want to print all the Array element or edit or add a feature to an array
+# in this example you will see how to traverse an array:
 
+def arr_traverser(array):
+    for i in array: # o(n) time complexity
+        print(i) # ----> o(1) time complexity and o(1) space complexity
+arr_traverser(array1)
+
+#traversing in two dimesional arrays:  
+new_array2 = numpy.array([[1,2,3],[4,5,6]])
+print(new_array2)
+
+for i in range(len(new_array2)): #------> O(mn) time complexity and space c omplexity is O(1)
+    for e in range(len(new_array2[0])): #------> O(n) time compelxity
+        print(new_array2[i][e]) # ------> O(1) time and space complexity
+
+#searching through the two dimensional array:
+
+def search_array(array,value):
+    for i in range(len(array)):
+        for j in range(len(array[i])):
+            if value == array[i][j]:
+                print(f'element found at the index of: [{i}] ,[{j}]')
+            else:
+                print(f'elemnt not found at the {i} row')
+search_array(new_array2,6)
