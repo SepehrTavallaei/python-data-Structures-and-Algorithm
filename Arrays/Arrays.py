@@ -73,3 +73,11 @@ def search_array(array,value):
             else:
                 print(f'elemnt not found at the {i} row')
 search_array(new_array2,6)
+
+
+#Deletion arrays:
+
+td_array = numpy.array([[1,2,3,4],[5,6,7,8],[9,10,11,12]])
+print(td_array)
+newtd_array = numpy.delete(td_array,1,axis=0) # the second parameter is for culomns and the third parameter is for rows
+print(newtd_array)
