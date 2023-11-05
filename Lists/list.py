@@ -1,0 +1,1 @@
+#list is an orderd data type that holds an orderd collection of data types
