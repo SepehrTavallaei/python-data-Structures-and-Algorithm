@@ -37,3 +37,26 @@ print(my_list)
 new_list = [9,10,11,12,13]
 my_list.extend(new_list) # adds up new list to the end of my_list.
 #o(n) time and space complexity
+
+# slicing trough the list:
+
+ # lets imaging that we have a list like this: 
+my_list2 = ['a', 'b', 'c', 'd', 'e', 'f']
+#if we want to select the first two element we do this:
+print(my_list2[:2 ]) # basically the format that we slice a list is like: 
+#start index:end index: step over
+ # if we ommit the second part of the slicing it will start from the starting index(the one that you include) untill the end of your list 
+ # if we want to delete and put an other element instead of deleted elements using list slicing we do this:
+my_list2[0:2] = ['x','y'] 
+print(my_list2)
+#List methods for deletion
+#- pop()
+# we give this method an index of the element that we want to delete:
+my_list2.pop(0) # note that if we didnt put any index the methode will delete the last element of the list
+print(my_list2)
+#- delete()
+# we give it an index and it will take care of deleting that element it self:
+del my_list[1] # => this will delete the second element of our list 
+#- remove()
+
+ 
