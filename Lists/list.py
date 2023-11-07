@@ -57,6 +57,49 @@ print(my_list2)
 #- delete()
 # we give it an index and it will take care of deleting that element it self:
 del my_list[1] # => this will delete the second element of our list 
-#- remove()
+#- remove() # => it is very usefull when you want to remove an element it selfe and not knowing the index;
+# 
+# Linear search:
+#  this kind of search is basically like this:
+def linear_search(p_list, p_target):
+    for i,value in enumerate(p_list):
+        if value == p_target:
+            return i
+    return -1
 
- 
+print(linear_search([1,2,3,4],4)) # which gives us 3 as the index of value 4
+ # the space complexity of this operation is o(1) and the time complexity is O(n)
+
+
+#list operations:
+ # + operator : it concatenate the lists:
+a = [1,2,3]
+b = [4,5,6]
+c = a + b
+print(c) # it returns [1,2,3,4,5,6]
+# * operator : repeats n times of each element that is in the list:
+print(a*4) # like this : [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3]
+# len()
+# this function returns the length of the list that we gave
+#max() this function returns the biggest number in the list
+# min this function is the oposite of max it returns the minimum or the lowest number of the list
+# sum this function return the sumation of all the elements in the given list 
+
+test_list = []
+while(True):
+    number = input('please enter a number: ')
+    if number == "done":
+        print(sum(test_list)/len(test_list))
+        break
+    else:
+        test_list.append(int(number))
+# list function : 
+a = 'hello'
+b = list(a) # this will iterate through all the characters of a variuable and as each character we have an element in the list
+
+
+#split function :
+# it is like list but it will only save the new element in the list if it sees a space in the string:
+c = "hello hello hello"
+d = c.split()
+print(d)
