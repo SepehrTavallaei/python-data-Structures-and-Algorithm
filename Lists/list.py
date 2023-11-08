@@ -86,13 +86,13 @@ print(a*4) # like this : [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3]
 # sum this function return the sumation of all the elements in the given list 
 
 test_list = []
-while(True):
-    number = input('please enter a number: ')
-    if number == "done":
-        print(sum(test_list)/len(test_list))
-        break
-    else:
-        test_list.append(int(number))
+#while(True):
+    # number = input('please enter a number: ')
+    #if number == "done":
+       # print(sum(test_list)/len(test_list))
+      #  break
+   # else:
+      #  test_list.append(int(number))
 # list function : 
 a = 'hello'
 b = list(a) # this will iterate through all the characters of a variuable and as each character we have an element in the list
@@ -103,3 +103,29 @@ b = list(a) # this will iterate through all the characters of a variuable and as
 c = "hello hello hello"
 d = c.split()
 print(d)
+
+# draw backs of lists:
+ #lists methods usually return nothing when we modify the lists using them for example :
+list4 = [4,5,2,1]
+# list4 = list4.sort()
+print(list4) # returns non 
+#the best way to avoid these kinds of erors is that we read the documentation carfully
+#in python when we assign a variuable we do not specifically copy the value inside of it but we assign the same address in memory to both of them to avoid this kind of problem with lists we have to do this:
+list5 = list4[:]
+
+# Arrays vs lists:
+# similarities: 1) both of them can be sliced 2) both of them can be iterated through 3) both of them can be indexed 4) both of them are mutable (we can update the elements inside of it)
+#diffrences:
+#Arrays are specially designed for aritmetic operations it means that if we want to do similar operations we should consider arrays instead of lists;
+#in arrays all elements have to be smae data type but in lists we can also use many types of data types 
+
+#list comprehension:
+#creating a new list from other lists is called list comprehension;
+prev_list = [1,2,3]
+new_list2 = [i*2 for i in prev_list] # note that list comprehension doesn't only work with lists it also works with other iterators such as strings
+print(new_list2)
+
+#conditional list comprehension :
+prev_list2 = [1,2,3]
+new_list3 = [i*2 for i in prev_list2 if True]
+print(new_list3)
