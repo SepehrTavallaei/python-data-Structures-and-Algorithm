@@ -86,6 +86,6 @@ print(newtd_array)
  # - when we wana store multiple variables of the same data type
  # -  random access to the element because it has O(1) time complexity to access an element knowing the exact index
 #when to avoid using Arrays:
- # -  when we do not have same data type (we have to recreat an array for ech diffrent data type)
+ # -  when we do not have same data type (we have to recreat an array for each diffrent data type)
  # -   Arrays reseves memory in ram and we may not need that array in the future so keeping it could add up some space complexity. and also adding some new elements to hte array can also harm and effect the performance of our programm very badly because as we said arrays reserve memory but when we add new elements to it the system has to allocate a new location for it so it can fit in.
  

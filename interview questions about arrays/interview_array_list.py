@@ -28,7 +28,7 @@ def permutation_finder(list1, list2):
                 s='these lists are not permutated.'
     print(s)
 
-permutation_finder([1,2,3,4],[4,3,2,1])
+permutation_finder([1,2,3,4],[4,3 ,2,1])
             
 
 
