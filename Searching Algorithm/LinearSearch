@@ -1,0 +1,13 @@
+# Also known as sequential search it is the most simple seach algorithm.
+
+# the time complexity is O(n) and the space complexity is O(1)
+# having sorted Array is not very advisable to use linear seach to find your element.
+
+def LinearSearch(customList,value): # o(n) time complexity
+    for i in range(len(customList)):
+        if value == customList[i]:
+            return i
+    return -1
+
+cList = [1,5,7,5,37,90,101]
+print(LinearSearch(cList,90))
